@@ -1,0 +1,15 @@
+{
+  "name": "reactjs-examples",
+  "version": "0.0.1",
+  "description": "Reactjs examples.",
+  "main": "Main.js",
+  "scripts": {
+    "start": "open http://locahost:4321 & httpster -p 4321"
+  },
+  "author": "Daniela Popescu",
+  "license": "MIT",
+  "dependencies": {
+    "httpster": "^1.0.1",
+    "react-tools": "^0.13.3"
+  }
+}
