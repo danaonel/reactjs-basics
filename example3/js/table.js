@@ -54,7 +54,9 @@ var ResultsTable = React.createClass({
         // JS manipulation is triggered after the component finished updating and subsequent rendering
         $(this.getDOMNode()).draggable({axis: 'y', containment: '.formTable'});
         
-        /* Be careful with JS that manipulates the DOM */
+        // Be careful with JS that manipulates the DOM
+        // When new elements appear in the DOM, reactjs becomes confused when performing the diffing between virtial DOM and real DOM
+        // Try to update more than 1 digit at the time. The chart updates correctly, but the paragraph doesn't because it chokes on letterfx
         $(this.getDOMNode()).letterfx({"fx":"wave","letter_end":"rewind","fx_duration":"300ms"});
     }, 
     componentWillUnmount: function() {
