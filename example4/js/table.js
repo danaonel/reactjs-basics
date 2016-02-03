@@ -58,6 +58,7 @@ var ResultsTable = React.createClass({
         
         // Be careful with JS that manipulates the DOM
         // When new elements appear in the DOM, reactjs becomes confused when performing the diffing between virtial DOM and real DOM
+        // Try to update more than 1 digit at the time. The chart updates correctly, but the paragraph doesn't because it chokes on letterfx
         $(this.getDOMNode()).letterfx({"fx":"wave","letter_end":"rewind","fx_duration":"300ms"});
     },
     // If you delete any element but the last element, you will notice that reactjs thinks the last element will be deleted and it will render the components will brand new props. This speaks to how the data flows from parent component <Form> to child component <Table>
