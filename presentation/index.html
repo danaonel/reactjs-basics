@@ -222,8 +222,8 @@ built Module("Main")
             <h2>Initial cycle</h2>
             <p>Except <em>render</em> method, all the other methods will execute only once in the life time of a component.</p>
             <ol>
-              <li><em>getDefaultProps</em></li>
-              <li><em>getInitialState</em></li>
+              <li>Set the prop types (for typechecking purposes)</li>
+              <li><em>getInitialState</em> (or use constructor when using ES6)</li>
               <li><em>componentWillMount</em></li>
               <li><em>render</em></li>
               <li><em>componentDidMount</em></li>
